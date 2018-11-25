@@ -1,0 +1,18 @@
+<h2>*ngSwitchCase</h2>
+
+<div [ngSwitch]="numero">
+    <div *ngSwitchCase="1">a variável está com o valor de {{numero}}</div>
+
+    <div *ngSwitchCase="2">a variável está com o valor de {{numero}}</div>
+
+    <div *ngSwitchCase="3">a variável está com o valor de {{numero}}</div>
+
+    <div *ngSwitchCase="4">a variável está com o valor de {{numero}}</div>
+
+    <div *ngSwitchCase="5">a variável está com o valor de {{numero}}</div>
+
+    <div *ngSwitchDefault>Mensagem Padrão</div>
+</div>
+
+<button (click)="incrementarNumero()">Incrementar número</button>
+<button (click)="decrementarNumero()">Decrementar número</button>
