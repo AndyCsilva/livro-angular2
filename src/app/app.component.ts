@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Livro Angular 2';
-  foto = 'favicon.ico';
+  title: string = 'Livro Angular 2';
+  foto: string = 'favicon.ico';
+  desenvolvimento: string[] = ['Angular 2', 'JavaScript', 'TypeScript',	'HTML',	'CSS'];
+  valor: string;
 
   constructor(private alertaService: AlertaService) {
 
@@ -16,5 +18,10 @@ export class AppComponent {
 
   enviarMsg(): void {
     this.alertaService.msgAlerta();
+  }
+
+  seuFilhoQuerFalar(valorPassado): void {
+    console.log('seu filho está dizendo: %o', valorPassado);
+    this.valor = valorPassado;
   }
 }

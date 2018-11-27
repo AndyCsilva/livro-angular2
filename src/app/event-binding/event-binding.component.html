@@ -1,0 +1,22 @@
+<h2>
+    (event-binding)
+</h2>
+
+<button (click)="meuClick()">click aqui</button>
+<input (keyup)="digitou($event)" placeholder="digite aqui">
+<input #variavel (keyup)="digitouVarTemplate(variavel.value)" placeholder="digite aqui">
+<br>
+<br>
+<br>
+<input type="password" #qtdSenha (keyup)="validaSenha(qtdSenha.value)" placeholder="digite sua senha...">
+<button [disabled]="!habilitarBotao" (click)="gravarSenha(qtdSenha.value)">gravar senha</button>
+
+<h3>evento keyup.enter adicionar na lista</h3>
+<input type="text" #conteudo (keyup.enter)="adicionar(conteudo.value);	conteudo.value=''">
+<ul>
+    <li *ngFor="let	item	of	valores">{{item}}</li>
+</ul>
+
+<h3>blur</h3>
+<input type="text" #data (blur)="verIdade(data.value)">
+<p>Você tem: {{idade}} anos de idade</p>
